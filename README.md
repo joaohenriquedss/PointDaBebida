@@ -11,12 +11,12 @@
 * Deletar Bebidas 
 * Deletar Categoria
 
-### Funcionalidade Frontend
+### Funcionalidade Frontend : Telas
 
-* tela para fazer o cadastro de produtos/categoria
-* tela para editar/deletar produtos/listar produtos
-* tela para editar/deletar categoria/listar categoria e mostrar quantos produtos tem relacionado a categoria 
-* tela para criar novo adm
+* cadastro de produtos/categoria
+* editar/deletar produtos/listar produtos
+* editar/deletar categoria/listar categoria e mostrar quantos produtos tem relacionado a categoria 
+* cadrastro de novo adm
 
 ## Usuário Visitante
 
@@ -26,6 +26,6 @@
 * Listagem de produtos por categoria
 * Pesquisar produto por nome
 
-### Funcionalidade Frontend
+### Funcionalidade Frontend : Tela
 
-* tela principal vai ter a listagem de produtos
+* listagem de produtos
