@@ -12,3 +12,4 @@
 ## Usuário Visitante
 * Listagem de produtos
 * Listagem de produtos por categoria
+* Pesquisar produto por nome
