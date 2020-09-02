@@ -13,10 +13,10 @@
 
 ### Funcionalidade Frontend
 
-* 1 tela para fazer o cadastro de produtos/categoria
-* 1 tela para editar/deletar produtos/listar produtos
-* 1 tela para editar/deletar categoria/listar categoria e mostrar quantos produtos tem relacionado a categoria 
-* 1 tela para criar novo adm
+* tela para fazer o cadastro de produtos/categoria
+* tela para editar/deletar produtos/listar produtos
+* tela para editar/deletar categoria/listar categoria e mostrar quantos produtos tem relacionado a categoria 
+* tela para criar novo adm
 
 ## Usuário Visitante
 
@@ -28,4 +28,4 @@
 
 ### Funcionalidade Frontend
 
-* 1 tela principal vai ter a listagem de produtos
+* tela principal vai ter a listagem de produtos
