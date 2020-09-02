@@ -26,6 +26,6 @@
 * Listagem de produtos por categoria
 * Pesquisar produto por nome
 
-### Funcionalidade Frontend : Tela
+### Funcionalidade Frontend : Telas
 
-* listagem de produtos
+* listagem de produtos, com filtragens por nome ou/e categoria
