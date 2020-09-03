@@ -16,7 +16,7 @@
 * Cadastro de produtos/categoria
 * Editar/deletar produtos/listar produtos
 * Editar/deletar categoria/listar categoria e mostrar quantos produtos tem relacionado a categoria 
-* Cadrastro de novo adm
+
 
 ## Usuário Visitante
 
