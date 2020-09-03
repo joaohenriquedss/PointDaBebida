@@ -13,10 +13,9 @@
 
 ### Funcionalidade Frontend : Telas
 
-* Cadastro de produtos/categoria
 * Editar/deletar produtos/listar produtos
 * Editar/deletar categoria/listar categoria e mostrar quantos produtos tem relacionado a categoria 
-
+* Cadastro de produtos/categoria
 
 ## Usuário Visitante
 
@@ -29,3 +28,10 @@
 ### Funcionalidade Frontend : Telas
 
 * Listagem de produtos, com filtragens por nome ou/e categoria
+
+### Criando Primeira protótipo da tela de admin 
+
+<p align="center">
+  <img src="imgs/tela1.jpg">
+</p>
+
