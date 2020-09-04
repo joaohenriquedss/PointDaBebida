@@ -29,9 +29,16 @@
 
 * Listagem de produtos, com filtragens por nome ou/e categoria
 
-### Criando Primeira protótipo da tela de admin 
+### Criando Primeiro protótipo da tela de admin(Usando coreldraw)
 
 <p align="center">
-  <img src="imgs/tela1.jpg">
+  <img src="imgs/p2.png">
+</p>
+
+
+### Criando Primeiro protótipo da tela de visitante(Usando coreldraw)
+
+<p align="center">
+  <img src="imgs/p1.png">
 </p>
 
