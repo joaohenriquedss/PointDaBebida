@@ -1,6 +1,7 @@
+const Category = require('../models/Category.js');
 const Product = require('../models/Product.js');
-var multer  = require('multer')
-var upload = multer({dest: 'uploads/'})
+var multer = require('multer')
+var upload = multer({ dest: 'uploads/' })
 
 module.exports = {
   async index(req, res) {
@@ -18,6 +19,21 @@ module.exports = {
       image_path
     })
     return res.json(product)
+  },
+  async indexProductFilter(req, res) {
+    const { name } = req.body;
+    var category = await Category.findOne({
+      name: name,
+    })
+    if (!category) {
+      return res.json({
+        message: 'Categoria nao existe'
+      }).status(404)
+    }
+    var products = await Product.find({
+      category: category._id
+    })
+    return res.json(products)
   },
 
   async destroy(req, res) {
