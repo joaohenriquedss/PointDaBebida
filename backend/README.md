@@ -2,10 +2,32 @@
 
 ### Funcionalidade Backend
 
-* Cadastrar Bebidas
-* Cadastrar Categoria
-* Editar Bebidas
-* Editar Categoria
-* Deletar Bebidas 
-* Deletar Categoria
+### Cadastrar Bebidas
+
+* Nome
+* Categoria que a bebida pertence 
+* Preço
+
+### Cadastrar Categoria
+
+* Nome
+
+### Editar Bebidas
+
+* Nome
+* Categoria
+* Preço
+
+### Editar Categoria
+
+* Nome
+
+### Deletar Bebidas 
+
+* Deletar bebida pelo nome
+### Deletar Categoria
+
+* Deletar categoria pelo nome
+
+
 
