@@ -29,7 +29,7 @@
 
 * Deletar categoria pelo nome
 
-### Cadastrar Usuario
+### Cadastrar Usuario ADM
 * Nome
 * Email
 * Senha
