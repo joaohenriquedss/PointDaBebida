@@ -29,5 +29,8 @@
 
 * Deletar categoria pelo nome
 
-
+### Cadastrar Usuario
+* Nome
+* Email
+* Senha
 
