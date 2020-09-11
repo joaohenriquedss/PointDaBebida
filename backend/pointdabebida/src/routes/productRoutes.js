@@ -6,6 +6,6 @@ var upload = multer({dest: 'uploads/'})
 
 router.post('/post', upload.single('image_path'), productController.store);
 router.get('/get', productController.index);
-router.get('/delete', productController.destroy);
-
+router.delete('/delete', productController.destroy);
+router.get('/get', productController.indexProductFilter);
 module.exports = router;
