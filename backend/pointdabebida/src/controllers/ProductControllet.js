@@ -5,10 +5,15 @@ var upload = multer({ dest: 'uploads/' })
 
 module.exports = {
   async index(req, res) {
+    const { name } = req.body;
+    if(name) {
+      const product = await Product.find({
+        name:name
+      });
+    }
     const product = await Product.find();
     return res.json(product);
   },
-
   async store(req, res) {
     const image_path = req.file.path;
     const { name, price, category } = req.body;
