@@ -1,5 +1,6 @@
 const Category = require('../models/Category.js');
 const Product = require('../models/Product.js')
+const fs = require('fs')
 module.exports = {
 
   async index(req, res) {
@@ -37,18 +38,18 @@ module.exports = {
       category: category._id
     })
     products.forEach(async element => {
-      await this.destroyImage(element.image_path)
+      await destroyImage(element.image_path)
       await Product.findByIdAndDelete(element._id)
 
     });
 
     const response = await Category.findByIdAndDelete(category._id)
-    return res.json(response)
-  },
-  async destroyImage(image_path){
-    fs.unlink(image_path, async (err) => {
-      if (err) throw err;
-      console.log(image_path + ' was deleted');
-    });
+    return res.json('response')
   }
+}
+async function destroyImage(image_path){
+  fs.unlink(image_path, async (err) => {
+    if (err) throw err;
+    console.log(image_path + ' was deleted');
+  })
 }
