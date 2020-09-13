@@ -2,20 +2,20 @@ const Category = require('../models/Category.js');
 const Product = require('../models/Product.js')
 module.exports = {
 
-  async index(req,res) {
+  async index(req, res) {
     const categories = await Category.find();
     return res.json(categories);
   },
 
   async store(req, res) {
     const { name } = req.body;
-    var category = await User.find({
+    var category = await Category.findOne({
       name: name,
     })
-    if (category.length > 0) {
+    if (category) {
       return res.json({
         message: 'Categoria já existe'
-      })
+      }).status(404)
     }
     const categories = await Category.create({
       name,
@@ -28,7 +28,7 @@ module.exports = {
     var category = await Category.findOne({
       name: name,
     })
-    if(!category){
+    if (!category) {
       return res.json({
         message: 'Categoria nao existe'
       }).status(404)
@@ -37,10 +37,18 @@ module.exports = {
       category: category._id
     })
     products.forEach(async element => {
+      await this.destroyImage(element.image_path)
       await Product.findByIdAndDelete(element._id)
+
     });
 
     const response = await Category.findByIdAndDelete(category._id)
     return res.json(response)
+  },
+  async destroyImage(image_path){
+    fs.unlink(image_path, async (err) => {
+      if (err) throw err;
+      console.log(image_path + ' was deleted');
+    });
   }
 }
