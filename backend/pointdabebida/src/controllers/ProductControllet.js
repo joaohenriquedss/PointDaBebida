@@ -17,12 +17,15 @@ module.exports = {
     const product = await Product.find();
     return res.json(product);
   },
-  async store(req, res) {
 
-    const image_path = req.file.path;
+  async store(req, res) {
+    let image_path;
+    if(req.file) {
+      image_path = req.file.path;
+    }
     const { name, price, category } = req.body;
 
-    if(!name || !price || !category) {
+    if(!name || !price || !category || !image_path) {
       return res.json({
         message : 'Variavel undefined'
       })
@@ -31,9 +34,6 @@ module.exports = {
       name: category,
     })
 
-    var category_id = await Category.findOne({
-      name: category,
-    })
     var verify = await Product.findOne({
       name: name
     })
