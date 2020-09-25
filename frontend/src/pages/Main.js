@@ -1,5 +1,14 @@
 import React from 'react'
+import Header from '../components/Header/index'
+import Footer from '../components/Footer/footer'
+import Menuleft from '../components/Menu/Menuleft'
 
 export default function Main() {
-  return <h1>Bora papai</h1>
+  return ([
+  
+      <Header />,
+      <Menuleft/>,
+      <Footer />]
+   
+  )
 }
