@@ -7,6 +7,5 @@
 * Cadastro de produtos/categoria
 
 Entrega : Login
-Um componente com...
 - Estado interno sendo alterado
 - Props que afetam o componente
