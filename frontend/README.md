@@ -6,6 +6,6 @@
 * Editar/deletar categoria/listar categoria e mostrar quantos produtos tem relacionado a categoria 
 * Cadastro de produtos/categoria
 
-Entrega : Login
+Entrega : src/pages/Login
 - Estado interno sendo alterado
 - Props que afetam o componente
