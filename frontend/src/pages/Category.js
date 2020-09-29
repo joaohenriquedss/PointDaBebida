@@ -11,6 +11,8 @@ export default function Category(props) {
 
   function handleSubmit(e){
     e.preventDefault();
+    //Se cadastrou categoria retorna categoria cadastrada
+    //Se não retorna categoria nao cadastrada
     props.history.push('/main')
   }
   

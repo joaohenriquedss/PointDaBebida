@@ -1,5 +1,7 @@
 .login-container {
   height: 100%;
+  width: 85%;
+  float: right;
   display: flex;
   justify-content: center;
   align-items: center;

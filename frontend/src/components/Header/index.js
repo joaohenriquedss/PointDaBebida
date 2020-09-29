@@ -7,7 +7,6 @@ export default function Header() {
     <div className='header-container'>
       <div className='header-content'>
         <img className="logo" src={logo} alt="Point" />
-        <h1></h1>
       </div>
     </div>
   );
