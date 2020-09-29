@@ -1,14 +1,15 @@
 import React from 'react';
 import './Menuleft.css';
-import imgButton from '../../imgs/p7.png'
+
 
 export default function Menuleft() {
   return (
     <div className='menuleft-container'>
       <div className='menuleft-content'>
         <div class="sidenav">
-          <a href="#editar" >Editar</a>
-          <a href="#cadastrar">Cadastrar</a>
+          <a href="#editar" >Inicio</a>
+          <a href="#cadastrar">Categoria</a>
+          <a href="#cadastrar">Produto</a>
         </div>
       </div>
     </div>

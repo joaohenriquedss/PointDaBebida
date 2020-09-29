@@ -5,10 +5,8 @@ import Menuleft from '../components/Menu/Menuleft'
 
 export default function Main() {
   return ([
-  
       <Header />,
       <Menuleft/>,
       <Footer />]
-   
   )
 }

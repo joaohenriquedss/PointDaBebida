@@ -2,29 +2,35 @@ import React, {useState} from 'react';
 import './Login.css'
 import logo from '../imgs/p4.png'
 import imgButton from '../imgs/p7.png'
+import Header from '../components/Header/index'
+import Footer from '../components/Footer/footer'
+import Menuleft from '../components/Menu/Menuleft'
 
-export default function Login(props) {
+export default function Product(props) {
   const [username, setUsername] = useState('');
-
   function handleSubmit(e){
     e.preventDefault();
     props.history.push('/main')
   }
-  
   return (
+    [<Header />,
+      <Menuleft/>,
     <div className="login-container" >
       <form onSubmit={handleSubmit}>
         <img className="logo" src={logo} alt="Point" />
         <input 
-          placeholder='Digite seu nome'
-          value={username}
-          onChange={e =>setUsername(e.target.value)}
+          placeholder='Nome do Produto'
           />
-        <input type="password" placeholder='Digite sua senha' />
+          <input 
+          placeholder='Categoria do Produto'
+          />
+          <input 
+          placeholder='Preço do Produto'
+          />
         <button type='submit' > <img className="imgButton" src={imgButton} /> <p className='nameButton'>OK</p></button>
       </form>
-
-    </div>
+    </div>,
+    <Footer />]
 
   );
 }
