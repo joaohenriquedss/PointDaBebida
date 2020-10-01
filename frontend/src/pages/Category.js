@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
-import './Login.css'
-import Header from '../components/Header/index'
+import Header from '../components/Header/header'
 import Footer from '../components/Footer/footer'
 import Menuleft from '../components/Menu/Menuleft'
 import SetCategory from '../components/Category/setCategory'

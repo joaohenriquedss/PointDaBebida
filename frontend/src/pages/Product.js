@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './Login.css'
 import logo from '../imgs/p4.png'
 import imgButton from '../imgs/p7.png'
-import Header from '../components/Header/index'
+import Header from '../components/Header/header'
 import Footer from '../components/Footer/footer'
 import Menuleft from '../components/Menu/Menuleft'
 
