@@ -1,0 +1,7 @@
+.aviso {
+  position: fixed;
+  margin-top: 70vh;
+  margin-left: 45vw;
+  font-size: 30px;
+  color: red;
+}

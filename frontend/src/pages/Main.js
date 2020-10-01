@@ -7,9 +7,6 @@ export default function Main() {
   return ([
       <Header />,
       <Menuleft/>,
-      <div>
-        <h1>MENU</h1>
-      </div>,
       <Footer />]
   )
 }

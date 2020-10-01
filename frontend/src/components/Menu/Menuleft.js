@@ -3,10 +3,6 @@ import './Menuleft.css';
 
 
 export default function Menuleft(props) {
-  function handleSubmit(e){
-    e.preventDefault();
-    props.history.push('/main')
-  }
   return (
     <div className='menuleft-container'>
       <div className='menuleft-content'>

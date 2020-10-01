@@ -1,15 +1,13 @@
 .login-container {
   height: 100%;
   width: 85%;
+  padding: 200px;
   float: right;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
 }
 .login-container form {
   width: 100%;
   max-width: 300px;
-  display: flex;
   flex-direction: column;
 }
 .login-container form input {

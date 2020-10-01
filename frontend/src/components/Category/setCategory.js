@@ -5,10 +5,11 @@ import imgButton from '../../imgs/p7.png'
 
 export default function SetCategory(props) {
   const [username, setUsername] = useState('');
-  const setteste = props.teste
+  const setAviso = props.aviso
   function handleSubmit(e){
     e.preventDefault();
-    setteste(username)
+    setAviso('categoria '+ username + ' cadastrada')
+
     //Se cadastrou categoria retorna categoria cadastrada
     //Se não retorna categoria nao cadastrada
   }
