@@ -1,7 +1,10 @@
 .aviso {
-  position: fixed;
-  margin-top: 70vh;
-  margin-left: 45vw;
+  position: absolute;
+  top: 80%;
+  left: 47%;
   font-size: 30px;
   color: red;
+  display:flex;
+  text-align:justify;
+ 
 }
