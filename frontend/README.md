@@ -11,3 +11,5 @@ Entrega 1: src/pages/Login
 - Props que afetam o componente
 
 Entrega 2: src/pages/Category
+
+- Um subcomponente com... Props sendo afetado pelo estado do componente pai
