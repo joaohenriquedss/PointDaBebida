@@ -6,4 +6,6 @@
   color: red;
   display:flex;
   text-align:justify;
+  text-transform: uppercase;
+ 
 }
