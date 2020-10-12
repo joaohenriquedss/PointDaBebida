@@ -1,0 +1,8 @@
+.listProducts {
+  margin-top: 10%;
+  width: 80%;
+  float: right;
+}
+li {
+  list-style-type: none;
+}
