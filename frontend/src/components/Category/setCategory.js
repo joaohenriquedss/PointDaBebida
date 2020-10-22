@@ -6,6 +6,7 @@ import imgButton from '../../imgs/p7.png'
 export default function SetCategory(props) {
   const [username, setUsername] = useState('');
   const setAviso = props.aviso
+  
   function handleSubmit(e){
     e.preventDefault();
     setAviso('categoria '+ username + ' cadastrada')
