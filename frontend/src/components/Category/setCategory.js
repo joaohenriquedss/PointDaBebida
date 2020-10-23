@@ -9,21 +9,25 @@ export default function SetCategory(props) {
   
   function handleSubmit(e){
     e.preventDefault();
-    setAviso('categoria '+ username + ' cadastrada')
-
+    if((username == '')){
+      setAviso('')
+    }else {
+      setAviso('categoria '+ username + ' cadastrada')
+    }
     //Se cadastrou categoria retorna categoria cadastrada
-    //Se não retorna categoria nao cadastrada
+    //Se não retorna categoria naoa cadastrada
   }
   return (
     <div className="login-container" >
       <form onSubmit={handleSubmit}>
         <img className="logo" src={logo} alt="Point" />
         <input 
+          data-testid="form-field"
           placeholder='Categoria do Produto'
           value={username}
           onChange={e =>setUsername(e.target.value)}
           />
-        <button type='submit' > <img className="imgButton" src={imgButton} /> <p className='nameButton'>OK</p></button>
+        <button data-testid="form-btn" type='submit' > <img className="imgButton" src={imgButton} /> <p className='nameButton'>OK</p></button>
       </form>
     </div>
   );

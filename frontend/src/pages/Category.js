@@ -9,11 +9,11 @@ export default function Category(props) {
   const [aviso, setAviso] = useState('');
   return (
     <div>
-      <Header/>
+      <Header />
       <Menu />
-      <h1 className='aviso' >{aviso}</h1>
+      <h1 data-testid='text' className='aviso' >{aviso}</h1>
       <SetCategory aviso={setAviso} />
-      <Footer/>
+      <Footer />
     </div>
   );
 }
