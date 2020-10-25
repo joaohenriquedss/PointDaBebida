@@ -1,10 +1,12 @@
 .login-container {
   height: 100%;
+  width: 100%;
+  padding: 200px;
+  float: right;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .login-container form {
   width: 100%;
   max-width: 300px;
@@ -37,10 +39,10 @@
   width: auto;
   height: auto;
 }
-.nameButton {
+.nameButtonLogin {
   position: absolute;
-  top: 69%;
-  right: 42%;
+  top: 73%;
+  right: 30%;
   transform: translate(-50%, -50%);
   font-size: 22px;
 }

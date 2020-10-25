@@ -8,10 +8,8 @@ import './Main.css'
 export default function Main(props) {
   return (
     <div>
-      <Header />
       <Menuleft />
       <GetListProduct />
-      <Footer />
     </div>
   );
 }

@@ -21,7 +21,7 @@ export default function Login(props) {
           onChange={e =>setUsername(e.target.value)}
           />
         <input type="password" placeholder='Digite sua senha' />
-        <button type='submit' > <img className="imgButton" src={imgButton} /> <p className='nameButton'>OK</p></button>
+        <button type='submit' > <img className="imgButton" src={imgButton} /> <p className='nameButtonLogin'>LOGIN</p></button>
       </form>
 
     </div>

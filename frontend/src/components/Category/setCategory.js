@@ -9,7 +9,7 @@ export default function SetCategory(props) {
   
   function handleSubmit(e){
     e.preventDefault();
-    if((username == '')){
+    if((username === '')){
       setAviso('')
     }else {
       setAviso('categoria '+ username + ' cadastrada')
@@ -18,7 +18,7 @@ export default function SetCategory(props) {
     //Se não retorna categoria naoa cadastrada
   }
   return (
-    <div className="login-container" >
+    <div className="category-container" >
       <form onSubmit={handleSubmit}>
         <img className="logo" src={logo} alt="Point" />
         <input 

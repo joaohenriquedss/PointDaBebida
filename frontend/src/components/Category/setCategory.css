@@ -1,21 +1,21 @@
-.login-container {
+.category-container {
   height: 100%;
-  width: 85%;
+  width: 62%;
   padding: 200px;
   float: right;
-
 }
-.login-container form {
+
+.category-container form {
   width: 100%;
   max-width: 300px;
   flex-direction: column;
 }
-.login-container form input {
+.category-container form input {
   margin-top: 20px;
   border: 1px solid #ddd;
   border-radius:  4px;
   height: 48px;
-  padding: 0 20px;
+  padding: 0 49px;
   font-size: 16px;
   color: #666;
 }
@@ -40,7 +40,7 @@
   font-size: 22px;
 }
 
-.login-container form button {
+.category-container form button {
   margin-top: 10px;
   border: 0;
   border-radius: 4px;
