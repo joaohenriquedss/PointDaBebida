@@ -17,3 +17,5 @@ Entrega 2: src/pages/Category
 Entrega 3: src/components/Product/getProduct
 
 - Um componente com... Estado sendo definido por um GET
+
+Entrega 4 : src/test
