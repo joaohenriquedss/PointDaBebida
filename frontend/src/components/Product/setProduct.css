@@ -1,26 +1,45 @@
-.category-container {
+.product-container {
   height: 100%;
   width: 62%;
   padding: 200px;
   float: right;
 }
 
-.category-container form {
+.product-container form {
   width: 100%;
   max-width: 300px;
   flex-direction: column;
 }
-.category-container form input {
+.inputNameProduct {
   margin-top: 20px;
   border: 1px solid #ddd;
-  border-radius:  18px;
+  border-radius: 18px;
   height: 48px;
   padding: 0 49px;
   font-size: 16px;
   color: #666;
 }
-.category-container form input::placeholder{
-  color: #999;
+.inputCategoryProduct {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  border-radius: 18px;
+  height: 48px;
+  padding: 0 49px;
+  font-size: 16px;
+  color: #666;
+}
+.inputPrecoProduct {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  border-radius: 18px;
+  height: 48px;
+  padding: 0 49px;
+  font-size: 16px;
+  color: #666;
+}
+.inputFileProduct {
+  margin-top: 20px;
+  border: 1px solid #ddd;
 }
 .logo {
   max-width:300px;
@@ -35,15 +54,15 @@
   height: auto;
 
 }
-.nameButton {
+.nameButtonProduct {
   position: absolute;
-  top: 69%;
-  right: 42%;
+  top: 78%;
+  right: 40%;
   transform: translate(-50%, -50%);
   font-size: 22px;
 }
 
-.category-container form button {
+.product-container form button {
   margin-top: 10px;
   border: 0;
   border-radius: 4px;

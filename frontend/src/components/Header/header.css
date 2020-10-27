@@ -13,12 +13,14 @@
 }
 
 .header-container .header-content-admin img {
+  position: fixed;
   width: 50px;
   float: right;
   z-index: 1;
 }
 
 .header-container .header-content-admin h1 {
+  position: fixed;
   width: 50px;
   float: right;
   z-index: 1;

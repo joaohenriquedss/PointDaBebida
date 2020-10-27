@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const userRoute = require('./routes/userRoutes')
 const categoryRoute = require('./routes/categoryRoutes')
 const productRoute = require('./routes/productRoutes')
+const path = require("path")
 
 // inicializar app express
 const app = express();
@@ -25,8 +26,11 @@ app.use(cors(corsOptions))
 app.use('/user', userRoute)
 app.use('/category', categoryRoute)
 app.use('/product', productRoute)
+app.use('/uploads', express.static(path.resolve(__dirname,'uploads')));
+console.log(path.resolve('uploads'))
 
 let porto = 8000;
 app.listen(porto, () => {
     console.log('Servidor em execução no porto ' + porto);
 });
+

@@ -26,6 +26,7 @@ export default function SetCategory(props) {
           placeholder='Categoria do Produto'
           value={username}
           onChange={e =>setUsername(e.target.value)}
+          required
           />
         <button data-testid="form-btn" type='submit' > <img className="imgButton" src={imgButton} /> <p className='nameButton'>OK</p></button>
       </form>

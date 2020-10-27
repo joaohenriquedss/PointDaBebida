@@ -1,0 +1,41 @@
+.listProducts{
+  width: auto;
+  height: auto;
+}
+.li-products{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  max-height: 350px;
+  width: auto;
+  height: auto;
+  margin-top: 20px;
+  margin-left: 20px;
+  position: relative;
+}
+.baseProduct {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.imageProduct {
+  max-width: 150px;
+  max-height: 100px;
+  position: absolute;
+  left: 15%;
+  top: 18%;
+}
+
+.namePrice{
+  top: 40%;
+  left: 66.8%;
+  position: absolute;
+  font-size: 25px;
+}
+
+.nameProduct {
+  top: 83%;
+  position: absolute;
+  font-size: 25px;
+}

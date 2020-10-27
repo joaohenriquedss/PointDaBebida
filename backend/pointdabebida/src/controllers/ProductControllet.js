@@ -2,7 +2,10 @@ const Category = require('../models/Category.js');
 const Product = require('../models/Product.js');
 var multer = require('multer');
 const { update } = require('../models/Category.js');
+var path = require('path')
+var caminhoImagem = path.resolve('')
 var upload = multer({ dest: 'uploads/' })
+
 const fs = require('fs')
 
 module.exports = {
@@ -46,7 +49,7 @@ module.exports = {
       name,
       price,
       category: category_id._id,
-      image_path
+      image_path : image_path
     })
     return res.json(product).status(201)
   },

@@ -7,7 +7,8 @@ const ProductSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'Category'
   },
-  image_path : {type: String }
+  image_path : {type: String },
+
 }, {
   timestamps: true,
 });
