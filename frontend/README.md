@@ -19,3 +19,9 @@ Entrega 3: src/components/Product/getProduct
 - Um componente com... Estado sendo definido por um GET
 
 Entrega 4 : src/test
+
+Entrega 5 : src/pages/login
+- uso de context para fazer login
+
+Entrega 6 : src/pages/product
+- nova rota
