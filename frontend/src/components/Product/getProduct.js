@@ -14,6 +14,7 @@ export default function GetListProducts(props) {
     const data = await response.data
     setList(data)
   }, [])
+  
   return (
     <div className='listProducts'>
           {getList.map(getList =>

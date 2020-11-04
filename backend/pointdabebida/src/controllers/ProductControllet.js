@@ -27,10 +27,15 @@ module.exports = {
       image_path = req.file.path;
     }
     const { name, price, category } = req.body;
-
-    if(!name || !price || !category || !image_path) {
+    if(!name || !price || !category) {
       return res.json({
         message : 'Variavel undefined'
+      })
+    }
+    else if(!image_path){
+      return res.json({
+        message : 'Imagem undefined',
+
       })
     }
     var category_id = await Category.findOne({

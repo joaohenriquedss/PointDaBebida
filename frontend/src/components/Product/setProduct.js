@@ -2,24 +2,40 @@ import React, { useState } from 'react';
 import logo from '../../imgs/p4.png'
 import imgButton from '../../imgs/p7.png'
 import './setProduct.css';
+import api from '../../services/api'
+import ImageUploader from "react-images-upload";
 
-export default function SetCategory(props) {
+export default function SetProduct(props) {
   const [username, setUsername] = useState('');
+  const [usercategory, setPCategory] = useState('');
+  const [useprice, setPrice] = useState('');
+  const [useimg, setImg] = useState('');
   const setAviso = props.aviso
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    if ((username === '')) {
+    if ((username === '') || (usercategory === '') || (useprice === '')) {
       setAviso('')
     } else {
-      setAviso('produto ' + username + ' cadastrada')
+      console.log(useimg)
+      let formData = new FormData();
+      formData.append("image_path", useimg , useimg.name);
+      formData.append("name", username)
+      formData.append("price",useprice)
+      formData.append("category",usercategory)
+      
+      const response = await api.post('product/post',formData,{
+        headers: {
+          "Content-Type": "multipart/form-data",
+        }
+      });
+      setAviso(response.data.message)
+
     }
-    //Se cadastrou categoria retorna categoria cadastrada
-    //Se não retorna categoria naoa cadastrada
   }
   return (
     <div className="product-container" >
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} method="post" encType="multipart/form-data">
         <img className="logo" src={logo} alt="Point" />
         <input
           className='inputNameProduct'
@@ -30,23 +46,28 @@ export default function SetCategory(props) {
         />
         <input
           className='inputCategoryProduct'
+          value={usercategory}
           type="text"
           placeholder='Categoria do Produto'
+          onChange={e => setPCategory(e.target.value)}
           required
         />
         <input
-           className='inputPrecoProduct'
+          className='inputPrecoProduct'
+          value={useprice}
           type="float"
           placeholder='Preço do Produto'
+          onChange={e => setPrice(e.target.value)}
           required
         />
         <input
           className='inputFileProduct'
           type="file"
           placeholder='Imagem do Produto'
+          onChange={e => setImg(e.target.files[0])}
           required
-          
         />
+        
         <button data-testid="form-btn" type='submit' > <img className="imgButton" src={imgButton} /> <p className='nameButtonProduct'>OK</p></button>
       </form>
     </div>

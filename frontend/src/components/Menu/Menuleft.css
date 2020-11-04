@@ -24,3 +24,14 @@
 .sidenav a:hover {
   color: #f1f1f1;
 }
+.icon_main {
+  max-width: 100%;
+  max-height: 100%;
+}
+.main-icon {
+  max-width: 150px;
+  max-height: 100px;
+  position: absolute;
+  left: 15%;
+  top: 18%;
+}

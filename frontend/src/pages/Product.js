@@ -10,7 +10,9 @@ export default function Category(props) {
     <div>
 
       <Menu />
-      <SetProduct/>
+      
+      <SetProduct aviso={setAviso}/>
+      <h1 data-testid='text' className='aviso' >{aviso}</h1>
 
     </div>
   );

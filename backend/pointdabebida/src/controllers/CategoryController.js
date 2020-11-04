@@ -21,7 +21,9 @@ module.exports = {
     const categories = await Category.create({
       name,
     })
-    return res.json(categories)
+    return res.json({
+      message: 'Categoria Cadastrada'
+    })
   },
 
   async destroy(req, res) {
