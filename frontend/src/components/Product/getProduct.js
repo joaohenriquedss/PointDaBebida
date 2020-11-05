@@ -1,6 +1,7 @@
 import React,{useState , useEffect} from 'react';
 import image from '../../imgs/p6.png'
 import api from '../../services/api'
+import imgButtonEdit from '../../imgs/p10.png'
 import './getProduct.css'
 const image_path = 'http://localhost:8000/'
 
@@ -23,6 +24,7 @@ export default function GetListProducts(props) {
               <h1 className='nameProduct'>{getList.name}</h1>
               <h2 className='namePrice'>{getList.price} $</h2>
               <img className='imageProduct' src={image_path+(getList.image_path)}></img>
+              <button className='buttonEdit'><img className="imgEdit" src={imgButtonEdit}/></button>
             </li>
           )}
     </div>

@@ -1,0 +1,31 @@
+.div-search{
+  width: 100%;
+  height: 80px;
+}
+
+.inputProduct {
+  opacity : 0.5;
+  position: fixed;
+  width: 30%;
+  left: 38%;
+  top: 3%;
+  z-index: 1;
+  border: 1px solid #e0b61d;
+  background: #e0b61d;
+  box-shadow: 0 0 3px;
+  border-radius: 9px;
+  height: 28px;
+  font-size: 16px;
+  padding: 5px;
+
+}
+
+.nameButtonSearch {
+  position: fixed;
+  width: 5%;
+  left: 67%;
+  top: 3%;
+  z-index: 1;
+  height: 28px;
+  font-size: 16px;
+}

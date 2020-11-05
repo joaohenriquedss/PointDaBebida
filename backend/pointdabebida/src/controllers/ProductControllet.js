@@ -23,18 +23,18 @@ module.exports = {
 
   async store(req, res) {
     let image_path;
-    if(req.file) {
+    if (req.file) {
       image_path = req.file.path;
     }
     const { name, price, category } = req.body;
-    if(!name || !price || !category) {
+    if (!name || !price || !category) {
       return res.json({
-        message : 'Variavel undefined'
+        message: 'Variavel undefined'
       })
     }
-    else if(!image_path){
+    else if (!image_path) {
       return res.json({
-        message : 'Imagem undefined',
+        message: 'Imagem undefined',
 
       })
     }
@@ -54,9 +54,12 @@ module.exports = {
       name,
       price,
       category: category_id._id,
-      image_path : image_path
+      image_path: image_path
     })
-    return res.json(product).status(201)
+    return res.json({
+      message: 'Produto Salvo',
+
+    }).status(201)
   },
   async indexProductFilter(req, res) {
     const { name } = req.body;
