@@ -19,3 +19,12 @@ Entrega 3: src/components/Product/getProduct
 - Um componente com... Estado sendo definido por um GET
 
 Entrega 4 : src/test
+- Testar um componente que tenha...
+- Props e alteração de estado
+
+Entrega 5 : src/pages/login
+- Uso de um contexto para...
+- Propagação de estado para baixo e para cima
+
+Entrega 6 : src/pagas/product
+- Novas telas para a aplicação
