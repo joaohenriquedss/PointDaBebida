@@ -43,21 +43,3 @@
   position: absolute;
   font-size: 25px;
 }
-.buttonEdit {
-  top: -7%;
-  left: 93%;
-  max-width: 40px;
-  max-height: 40px;
-  position: absolute;
-  font-size: 25px;
-  justify-content: center;
-  align-items: center;
-  background: #ff0d0d;
-  border-radius: 9px;
-  cursor: pointer;
-
-}
-.imgEdit {
-  max-width: 100%;
-  max-height: 100%;
-}

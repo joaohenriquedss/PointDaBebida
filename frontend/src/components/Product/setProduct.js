@@ -3,7 +3,6 @@ import logo from '../../imgs/p4.png'
 import imgButton from '../../imgs/p7.png'
 import './setProduct.css';
 import api from '../../services/api'
-import ImageUploader from "react-images-upload";
 
 export default function SetProduct(props) {
   const [username, setUsername] = useState('');
@@ -30,7 +29,6 @@ export default function SetProduct(props) {
         }
       });
       setAviso(response.data.message)
-
     }
   }
   return (
