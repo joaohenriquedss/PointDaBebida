@@ -37,31 +37,23 @@ export default function SimpleModal(props) {
   // getModalStyle is not a pure function, we roll the style only on the first render
   const [modalStyle] = React.useState(getModalStyle);
   const [open, setOpen] = React.useState(false);
-  const [username, setUsername] = useState('');
   const [usercategory, setPCategory] = useState('');
   const [useprice, setPrice] = useState('');
-  const [useimg, setImg] = useState('');
-  const setAviso = props.aviso
+  const setname = props.name
+  console.log(setname)
 
   async function handleSubmit(e) {
     e.preventDefault();
-    if ((username === '') || (usercategory === '') || (useprice === '')) {
-      setAviso('')
-    } else {
-      console.log(useimg)
-      let formData = new FormData();
-      formData.append("image_path", useimg, useimg.name);
-      formData.append("name", username)
-      formData.append("price", useprice)
-      formData.append("category", usercategory)
 
-      const response = await api.post('product/post', formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        }
-      });
-      setAviso(response.data.message)
+    const updateProduct = {
+      "name" : setname,
+      "price": useprice
     }
+    const response = await api.put('product/put', updateProduct, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      }
+    });
   }
 
   const handleOpen = () => {
@@ -79,10 +71,7 @@ export default function SimpleModal(props) {
           <img className="logo" src={logo} alt="Point" />
           <input
             className='inputNameProduct'
-            placeholder='Nome do Produto'
-            value={username}
-            onChange={e => setUsername(e.target.value)}
-            required
+            placeholder= {setname}
           />
           <input
             className='inputCategoryProduct'
@@ -90,7 +79,6 @@ export default function SimpleModal(props) {
             type="text"
             placeholder='Categoria do Produto'
             onChange={e => setPCategory(e.target.value)}
-            required
           />
           <input
             className='inputPrecoProduct'
@@ -98,16 +86,7 @@ export default function SimpleModal(props) {
             type="float"
             placeholder='Preço do Produto'
             onChange={e => setPrice(e.target.value)}
-            required
           />
-          <input
-            className='inputFileProduct'
-            type="file"
-            placeholder='Imagem do Produto'
-            onChange={e => setImg(e.target.files[0])}
-            required
-          />
-
           <button data-testid="form-btn" type='submit' > <img className="imgButton" src={imgButton} /> <p className='nameButtonProduct'>OK</p></button>
         </form>
       </div>

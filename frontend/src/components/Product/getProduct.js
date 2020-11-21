@@ -18,6 +18,7 @@ export default function GetListProducts(props) {
   }, [])
   
   return (
+    
     <div className='listProducts'>
           {getList.map(getList =>
             <li className='li-products' key={getList._id}>
@@ -25,7 +26,7 @@ export default function GetListProducts(props) {
               <h1 className='nameProduct'>{getList.name}</h1>
               <h2 className='namePrice'>{getList.price} $</h2>
               <img className='imageProduct' src={image_path+(getList.image_path)}></img>
-              <EditProduct/>
+              <EditProduct id={getList._id} name={getList.name}/>
             </li>
           )}
     </div>

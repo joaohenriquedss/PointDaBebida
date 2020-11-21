@@ -99,6 +99,7 @@ module.exports = {
     const product = await Product.findOne({
       name: name
     });
+    console.log(product)
     const product_new = await Product.findByIdAndUpdate(product._id, {
       name,
       price,
