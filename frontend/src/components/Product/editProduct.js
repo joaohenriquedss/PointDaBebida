@@ -54,6 +54,11 @@ export default function SimpleModal(props) {
         "Content-Type": "multipart/form-data",
       }
     });
+    const result = response.data.message
+    alert(result)
+    if(result == 'Produto Modificado'){
+      window.location.reload(false);
+    }
   }
 
   const handleOpen = () => {

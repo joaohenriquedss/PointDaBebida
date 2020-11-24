@@ -99,11 +99,23 @@ module.exports = {
     const product = await Product.findOne({
       name: name
     });
-    console.log(product)
-    const product_new = await Product.findByIdAndUpdate(product._id, {
-      name,
-      price,
-    })
-    return res.json(product_new)
+    if (!price && !category) {
+      return res.json({
+        message: 'Variavel undefined'
+      })
+    }
+    try {
+      const product_new = await Product.findByIdAndUpdate(product._id, {
+        category,
+        price,
+      })
+      return res.json({
+        message: "Produto Modificado"
+      }).status(201)
+    } catch (error) {
+      return res.json({
+        message: error
+      }).status(404)
+    }
   }
 }
