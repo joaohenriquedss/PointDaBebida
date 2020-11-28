@@ -62,10 +62,12 @@ module.exports = {
     }).status(201)
   },
   async indexProductFilter(req, res) {
-    const { name } = req.body;
+    const name  = req.params.category;
+
     var category = await Category.findOne({
       name: name,
     })
+    console.log(category)
     if (!category) {
       return res.json({
         message: 'Categoria nao existe'
@@ -77,7 +79,8 @@ module.exports = {
     return res.json(products)
   },
   async destroy(req, res) {
-    const { name } = req.body;
+    const name  = req.params.name;
+    console.log(name)
     var product = await Product.findOne({
       name: name,
     })
@@ -106,7 +109,6 @@ module.exports = {
     }
     try {
       const product_new = await Product.findByIdAndUpdate(product._id, {
-        category,
         price,
       })
       return res.json({

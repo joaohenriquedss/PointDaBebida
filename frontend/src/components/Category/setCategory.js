@@ -7,7 +7,7 @@ export default function SetCategory(props) {
   const [username, setUsername] = useState('');
   const setAviso = props.aviso
   
-  async function  handleSubmit(e){
+  async function handleSubmit(e){
     e.preventDefault();
     if((username === '')){
       setAviso('')
